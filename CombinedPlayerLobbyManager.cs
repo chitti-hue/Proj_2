@@ -20,7 +20,7 @@ public class CombinedPlayerLobbyManager : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        InitializeFirebase();
+       //InitializeFirebase();
     }
 
     private void InitializeFirebase()
@@ -44,7 +44,7 @@ public class CombinedPlayerLobbyManager : MonoBehaviourPunCallbacks
     private void ConnectToPhoton()
     {
         Debug.Log("Connecting to Photon...");
-        PhotonNetwork.ConnectUsingSettings();
+        //PhotonNetwork.ConnectUsingSettings();
     }
 
     public void InitializeUpdatePlayerStatus()
@@ -67,7 +67,7 @@ public class CombinedPlayerLobbyManager : MonoBehaviourPunCallbacks
 
     public void UpdatePlayerStatus(string userId, bool isOnline)
     {
-        if (playerProfileRef == null)
+        if (playerProfileRef != null)
         {
             Debug.LogError("Player profile reference is not initialized.");
             return;
@@ -184,6 +184,7 @@ public class CombinedPlayerLobbyManager : MonoBehaviourPunCallbacks
 
     private void UpdatePlayerList()
     {
+        Debug.log("PlayerList updated");
         if (playerListText != null)
         {
             string playerListContent = "Players in Lobby:\n";
