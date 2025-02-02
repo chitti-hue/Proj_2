@@ -1,7 +1,6 @@
 # Function to add two numbers
 def add_numbers(a, b):
-    return a + b
-
+    return a - b
 
 # Main part of the program
 if __name__ == "__main__":
